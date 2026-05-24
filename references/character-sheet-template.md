@@ -11,6 +11,8 @@ Banned: em-dash (—), en-dash (–). Use commas, colons, parens, or new sentenc
 
 *A character sheet, scouted from the parchment they call a resume.*
 
+**Last Updated**: {YYYY-MM-DD HH:MM}
+
 ## Identity
 - **Name**: {name}
 - **Current Title**: {title}
@@ -23,9 +25,17 @@ Banned: em-dash (—), en-dash (–). Use commas, colons, parens, or new sentenc
 - **Multi-class** (if applicable): {Second Class} ({why})
 
 ## Level and XP
-- **Level**: {N} (based on {years} years of experience, age-calibrated)
-- **XP to next level**: {short narrative line, e.g. "one major shipped initiative away from Level 8"}
+- **Level**: {N} (baseline from {years} years of experience: Level {baseline}, age-calibrated)
+- **XP**: {current} / {next-threshold} ({percent}%)
+- **XP to next level**: {N} ({short narrative, e.g. "one shipped initiative away"})
+- **Over-baseline penalty**: {applies / does not apply}
 - **Status flags** (if applicable): Inflation Debuff / Reborn / Wandering
+
+## XP Ledger (recent)
+*Last 5 entries. Full ledger lives in the campaign file.*
+| Date | Event | XP Delta |
+|------|-------|----------|
+| {YYYY-MM-DD} | {Event} | +{N} |
 
 ## Stats
 | Stat | Score | Modifier | One-line Justification |
@@ -52,22 +62,26 @@ Banned: em-dash (—), en-dash (–). Use commas, colons, parens, or new sentenc
 - **Frameworks**: {list, omit if none}
 
 ## Skill Tree
-{Nested list of hard skills with prereqs shown by indentation. Example:
-- Backend Engineering
-  - Distributed Systems
-    - Kafka
-  - APIs
-    - REST
-    - GraphQL
-- ML
-  - PyTorch
-}
+*Living tree maintained in the campaign file under Domain → Branch → Skill (per `references/skill-tree-taxonomy.md`). Use `/rpg learned <skill>` to add. Inline snapshot below shows current state.*
+
+- {Domain}
+  - {Branch} (last touched: {date})
+    - {Skill} (added {date}, touched {date})
+    - {Skill} (added {date}, touched {date}) ⚠ Rusting in {N} months
 
 ## Active Buffs
-- **{Buff name}**: {+N {stat}} ({why})
+- **{Buff name}**: {+N {stat}} ({why}, acquired {date})
 
 ## Active Debuffs
-- **{Debuff name}**: {-N {stat}} ({why, named not judged})
+- **{Debuff name}**: {-N {stat}} ({why, named not judged}, acquired {date})
+
+## Long-Term Goal
+- **Target**: {one-line goal, or "not set"}
+- **Set**: {YYYY-MM-DD}
+- **Time horizon**: {N} months
+- **Status**: {Active / Paused / Achieved / Revised}
+
+*Mirrors the Long-Term Goal block in the campaign file. Update with `/rpg goal "<new goal>"`.*
 
 ---
 
@@ -107,17 +121,22 @@ Banned: em-dash (—), en-dash (–). Use commas, colons, parens, or new sentenc
 *Quests ranked by stat-gain-per-effort, weighted toward the largest gaps.*
 
 ## Side Quests (Ranked)
-1. **{Quest Name}** ({effort}, {primary gain}, {secondary gain})
+1. **{Quest Name}** ({effort}, {XP} XP, {primary gain}, {secondary gain})
    - Why: {one line tying to the boss}
    - Prereqs: {list}
 2. **{Quest Name}** (...)
 3. **{Quest Name}** (...)
 
 ## Main Quests (Ranked)
-1. **{Quest Name}** ({effort}, {primary gain}, {secondary gain})
+1. **{Quest Name}** ({effort}, {XP} XP, {primary gain}, {secondary gain})
    - Why: {one line tying to the boss}
    - Prereqs: {list}
 2. **{Quest Name}** (...)
+
+## Epic Quests (if any)
+1. **{Quest Name}** ({effort}, {XP} XP, {primary gain}, {secondary gain})
+   - Why: {one line tying to the boss or long-term goal}
+   - Prereqs: {list}
 
 ---
 
@@ -132,3 +151,7 @@ Banned: em-dash (—), en-dash (–). Use commas, colons, parens, or new sentenc
   - {bullet on what gets cut or quieted}
   - {bullet on format and any easter-egg request}
 ```
+
+---
+
+> *Session history and the full XP ledger live in the campaign file at `~/Documents/Claude/Projects/RPG/{slug}-campaign.md` (or your `RPG_CAMPAIGN_DIR`).*

@@ -117,6 +117,98 @@ Two files, both saved in your working project folder:
 
 ---
 
+## Returning to the Tavern (v0.2.0)
+
+The first version of this skill was a one-shot. You'd come in, get a sheet, get a forged resume, and ride off. The next time you came back, I had no memory of who you were.
+
+That ends in v0.2.0. Now I keep a **campaign tome** for every adventurer who walks through the door. Your character, your stats, your quests, your XP, your skill tree, your long-term goal, all of it. It sits on your machine, never on the public road, and I read it every time you visit. You can pick up a year later and we resume mid-sentence.
+
+Three things changed:
+
+1. **Career as a persistent campaign.** Your sheet lives on. Every session adds to it.
+2. **A living skill tree.** Log a new skill with `/rpg learned <name>`, and I place it under the right branch. Branches you haven't touched in 12+ months get a "Rusting" tag, gentle nudge to refresh or prune.
+3. **A long-arc Quest Map.** Every quest now carries explicit XP and time math. The map renders in BOTH a month-by-month timeline (ASCII Gantt) and a sortable table, so you can see your journey at a glance and plan capacity realistically.
+
+---
+
+## Modes of Summoning
+
+The tavern door swings several ways now. Each opens a different conversation:
+
+| Command | What it does |
+|---------|--------------|
+| `/rpg` (no args, first time) | Full scan: character sheet, then the Path Fork (Boss Fight Arc or Professional Development Arc) |
+| `/rpg` (no args, returning) | Greets you by name, surfaces level, XP-to-next, active quest, asks what kind of visit |
+| `/rpg map` | Renders the Quest Map (timeline + table + XP trajectory) into your campaign file |
+| `/rpg log "<quest>" done` | Marks a quest complete, awards XP, recomputes level, may trigger a level-up and stat tick |
+| `/rpg learned "<skill>"` | Places a new skill on the living tree, awards minor XP, resets that branch's Rusting timer |
+| `/rpg goal "<text>"` | Sets or revises your long-term goal, anchors the long arc for the next Quest Map |
+| `/rpg sheet` | Re-renders your current character sheet from the campaign file |
+
+You can switch paths any time. A Path B adventurer who finds a target job can run `/rpg` with a JD to add a Boss and forge a resume. A Path A adventurer who wants to broaden out can run `/rpg goal` to anchor a development arc on top of the boss work.
+
+---
+
+## The Quest Map
+
+The headline feature of v0.2.0. When you run `/rpg map`, I write a fresh map to your campaign file and give you a short summary in chat.
+
+The map has three parts:
+
+1. **Summary block**: current level, XP percent to next level, count of active/planned/long-arc quests, estimated time to next level, estimated time to long-term goal, my pick for your next quest.
+2. **Timeline**: month-by-month ASCII Gantt from today forward. Each quest gets a bar. Today is marked with ▼. Planned quests show as ░, in-progress as ▓, completed-this-period as █. You can see at a glance which months are crowded and which are quiet.
+3. **Quest Table**: every quest with columns for Tier, Status, Effort (in adventurer-hours), Time Estimate, XP, Stat Gains, Prereqs, ETA Complete. Sortable in your head. Plus an XP Trajectory list showing which quests trigger which level-ups, and Notes flagging capacity warnings and prereq blockers.
+
+If your map gets unwieldy (more than 36 months of long-arc), I compress the back end with a `→` and a note. The map is a tool, not a wall to drown in.
+
+---
+
+## Where Your Campaign Lives
+
+Your campaign file lives on YOUR machine, not in any repo. Default path:
+
+```
+~/Documents/Claude/Projects/RPG/{adventurer-slug}-campaign.md
+```
+
+If you want it somewhere else, set `RPG_CAMPAIGN_DIR` in your environment and I'll use that.
+
+**Privacy is non-negotiable.** This file holds your real name, employers, salaries eventually, weaknesses, mentor names, every quiet doubt you logged in a Journal entry someday. The skill's `.gitignore` blocks `*-campaign.md`, `*-rpg-sheet*.md`, and `*-forged-*.*` so they cannot accidentally land in the public skill repo. If you ever clone this skill into a working directory, you can drop campaign files there safely.
+
+If you want a private archive of your campaign (iCloud, Dropbox, an encrypted private repo), point your backup at `~/Documents/Claude/Projects/RPG/` and you're covered.
+
+---
+
+## Migrating From v0.1.0
+
+If you used the skill before v0.2.0 and have a `*-rpg-sheet.md` sitting in a project folder, I'll find it on your next `/rpg` call and offer to bind it into a proper campaign tome. Say yes and I'll:
+
+1. Parse your old sheet for Identity, derive your slug.
+2. Create the campaign file at the canonical path.
+3. Copy your Character Sheet, Boss Report (if any), Quest Board, and confirmed plan into the new tome.
+4. Re-render your Skill Tree through the canonical taxonomy so it conforms going forward.
+5. Seed your XP Ledger at 0 (no retroactive credit, but your level carries over).
+6. Log the migration in Session History.
+
+Say no and I'll proceed with a fresh first-time scan instead, leaving your old sheet alone.
+
+---
+
+## What's Coming (v0.3.0+)
+
+The campaign file already has empty headings reserved for these. They will fill in over the next few updates:
+
+- **Interview Prep** (Boss Fight Rehearsal): mock questions scored on STR/INT/CHA/WIS, postmortem after real interviews
+- **Negotiation Log** (Loot Roll): salary research, BATNA work, counter-offer drafting
+- **Party** (Networking): mentors, peers, references, warm leads, party-up suggestions
+- **Journal** (Tavern Confession): periodic reflection check-ins, pattern surfacing
+- **Yearly Review** (End of Season): stat deltas, debuff clearing, rarity tier shifts
+- **HP Watch** (Burnout Monitoring): if you keep mentioning exhaustion, I pull back on Main Quest pressure and recommend Rest Stops
+
+The reserved sections aren't dead weight. They're the next chapters of the campaign, drafted ahead.
+
+---
+
 ## A Word Before You Begin
 
 This skill will not flatter you. It will score you honestly against the rubric, name your debuffs without dressing them up, and recommend quests that actually move the needle. It will also not punish you for being early in your journey, or for changing course at 50, or for taking a year off, or for any of the perfectly human reasons your resume looks the way it does. The Boss is the standard. Age is the calibration. The quests are the path.
