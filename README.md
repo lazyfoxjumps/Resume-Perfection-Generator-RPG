@@ -185,21 +185,6 @@ Say no and I'll proceed with a fresh first-time scan instead, leaving your old s
 
 ---
 
-## What's Coming (v0.3.0+)
-
-The campaign file already has empty headings reserved for these. They will fill in over the next few updates:
-
-- **Interview Prep** (Boss Fight Rehearsal): mock questions scored on STR/INT/CHA/WIS, postmortem after real interviews
-- **Negotiation Log** (Loot Roll): salary research, BATNA work, counter-offer drafting
-- **Party** (Networking): mentors, peers, references, warm leads, party-up suggestions
-- **Journal** (Tavern Confession): periodic reflection check-ins, pattern surfacing
-- **Yearly Review** (End of Season): stat deltas, debuff clearing, rarity tier shifts
-- **HP Watch** (Burnout Monitoring): if you keep mentioning exhaustion, I pull back on Main Quest pressure and recommend Rest Stops
-
-The reserved sections aren't dead weight. They're the next chapters of the campaign, drafted ahead.
-
----
-
 ## A Word Before You Begin
 
 This skill will not flatter you. It will score you honestly against the rubric, name your debuffs without dressing them up, and recommend quests that actually move the needle. It will also not punish you for being early in your journey, or for changing course at 50, or for taking a year off, or for any of the perfectly human reasons your resume looks the way it does. The Boss is the standard. Age is the calibration. The quests are the path.
