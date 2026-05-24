@@ -1,4 +1,4 @@
-# Resume Perfection Generator (RPG)
+# Reforged Professional Game (RPG)
 
 *Pull up a stool, adventurer. The fire's warm, the ale's cold, and your parchment's on the bar. The campaign tome is open to your page. Let's see where the road goes.*
 
