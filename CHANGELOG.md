@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to the Resume Perfection Generator (RPG) skill.
+All notable changes to the Reforged Professional Game (RPG) skill.
 
 ## [0.2.0] 2026-05-24, "The Campaign Update"
 
