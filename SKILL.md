@@ -1,6 +1,6 @@
 ---
 name: rpg
-version: 0.2.0
+version: 0.2.1
 description: |
   Gamify a resume into a D&D-style character sheet, scout a target job as a
   "boss fight," recommend ranked quests with XP and time math, then forge a
