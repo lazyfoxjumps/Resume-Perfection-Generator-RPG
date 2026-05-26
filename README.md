@@ -1,60 +1,60 @@
 # Resume Perfection Generator (RPG)
 
-*Pull up a stool, adventurer. The fire's warm, the ale's cold, and your parchment's on the bar. Let's have a look at it.*
+*Pull up a stool, adventurer. The fire's warm, the ale's cold, and your parchment's on the bar. The campaign tome is open to your page. Let's see where the road goes.*
 
 ---
 
 ## What This Tavern Offers
 
-I am the Guildmaster. You hand me your resume, I read it like a scroll, and I tell you who you really are: your class, your stats, your level, the gear you carry, the buffs that follow you, the debuffs that drag at your heels. Then you point me at the job you want, and I scout it as a Boss Fight. I show you exactly where the gap is. I draw up a Quest Board of small wins and long campaigns. You choose which stats to grind. I forge you a new resume, sharper than the one you walked in with.
+I am the Guildmaster. I run two trades from this tavern.
 
-This is not a polish-and-pray operation. This is a full character workup, a stat-by-stat gap analysis against a real opponent, a ranked quest plan, and a rebuilt blade by the end of the night.
+The first: you hand me your resume, I read it like a scroll, and I tell you who you really are. Your class, your six stats, your level, the gear you carry, the buffs that follow you, the debuffs that drag at your heels. Then you point me at a specific job, and I scout it as a Boss Fight. I draw up a ranked Quest Board with real XP and time math, you pick which stats to grind, and I forge you a sharper resume aimed at that dungeon.
+
+The second: you skip the specific job entirely. You tell me what version of yourself you're building toward, three years out, five years out. I plot the long arc as a Quest Map (a month-by-month timeline AND a sortable table), I tag every quest with how many adventurer-hours it takes and how much XP it pays out, and I show you exactly when your next level-up lands and how long the whole journey takes. No resume forged. Just a clear map and a campaign tome that grows with you.
+
+Both trades write to the same place: a persistent campaign file that lives on your machine and remembers everything. Come back in a week, a month, a year, and I greet you by name, surface your current level, name your active quest, and ask what brings you back to the tavern.
+
+This is not a polish-and-pray operation. This is a full character workup, a long-arc career map, a ranked quest plan with real numbers behind it, and a Guildmaster who remembers your story.
 
 ---
 
-## The Five Phases (How a Night at the Tavern Goes)
+## Two Roads (Choose After the Sheet)
 
-### 1. Character Sheet
+Every first visit starts the same: I read your resume and build your **Character Sheet** (class, stats, level, vitals, inventory, skill tree, buffs and debuffs, rarity tier). Saved to a markdown scroll, summarized in chat.
 
-I read your resume. If you brought a portfolio scroll (a URL), I read that too. I score you across the six sacred stats:
+Then you choose your road.
 
-- **STR** (Execution Power): how much you ship, how big the scope, who you move with you
-- **DEX** (Tactical Agility): speed, tool range, how cleanly you pivot
-- **CON** (Endurance): tenure, sustained delivery, resilience under fire
-- **INT** (Technical Depth): mastery, certs, the deep stuff
-- **WIS** (Judgment): strategy, mentorship, knowing what NOT to do
-- **CHA** (Influence): voice, leadership, the ability to move people
+### Path A: The Boss Fight Arc
 
-I assign you a Class (Warrior, Mage, Rogue, Bard, Cleric, Ranger, Artificer, or Paladin), and a second one if your signals are split. I figure your Level from your years in the field, and your XP bar to the next one. I check your Vitals (Burnout Resistance, Creative Reserve). I read your Equipped Inventory (certs, tools, languages, frameworks). I sketch your Skill Tree with prereqs shown. I name your Active Buffs and Debuffs honestly. I stamp the whole resume with a Rarity Tier: Common, Uncommon, Rare, Epic, or Legendary.
+You have a specific job in mind. Paste the JD or drop the URL.
 
-I save the whole sheet to a markdown scroll in your project folder. I will not flood the chat with the full thing. You can open the scroll yourself.
+1. **Boss Scouting**: I derive the Boss's required stat thresholds and show the gap, stat by stat. If the JD is sparse, I pull from a tome of role priors I keep behind the bar.
+2. **Quest Board**: I rank Side, Main, and Epic quests by stat-gain-per-effort against your largest gaps, with XP and time tagged on every one.
+3. **Adventurer's Choice**: I stop and ask which one to three stats you want to grind. If you don't know, I give my honest pick and ask you to confirm.
+4. **Forge**: I ask your format (.docx, .md, or .pdf) and rebuild the resume, sharper than what you walked in with. Strictly professional, ATS-friendly. Optional easter-egg version swaps section headers ("Quests Completed" instead of "Experience") if you ask.
+5. **Bind into a Tome**: I offer to start a persistent campaign so future visits remember you.
 
-### 2. Boss Scouting
+### Path B: The Professional Development Arc
 
-Now you point at the dungeon. Paste the job description, or drop me the URL and I'll WebFetch it. I derive the Boss's required stat thresholds (1-20, same scale as yours). If the JD is sparse, I pull from a tome of role priors I keep behind the bar (engineer, designer, PM, sales, founder, and a dozen more). I show you the Stat Gap Table: you vs. the Boss, stat by stat. I name the dealbreakers, the nice-to-haves, and any hidden signals between the lines.
+You don't have a specific opening in mind. You have a direction.
 
-### 3. Quest Board
+1. **Set the Long-Term Goal**: tell me what version of you we're building. Specific role, target year, optional company type.
+2. **Derive the Target Profile**: I look up what stats that future-you needs, show your current stats vs. that target as a Gap Table.
+3. **Generate Goal-Aligned Quests**: I pull from the catalog and send a raven out (WebSearch) for current 2026 advice on what skills, certs, and signals matter for your target role. Side, Main, and Epic quests across the next 12 to 36 months.
+4. **Seed the Campaign**: I create your campaign tome immediately, populate it with the goal, the quests, the stats, the skill tree.
+5. **Render the Quest Map**: month-by-month ASCII timeline AND sortable quest table, plus XP trajectory and capacity warnings. No resume forged. You walk out with a map.
 
-I rank quests by stat-gain-per-effort, weighted toward your largest gaps:
+You can switch paths whenever you want. A Path B adventurer who later finds a target job runs `/rpg` with a JD and I scout the Boss on top of your existing campaign. A Path A adventurer who wants to broaden runs `/rpg goal` and I anchor a long arc on top of your Boss work.
 
-- **Side Quests**: small wins. Hours to weeks. Add metrics to bullets, polish formatting, swap weak verbs, modernize the stack listing.
-- **Main Quests**: long campaigns. Months to years. Certifications worth chasing, skills worth learning, experience gaps worth filling, public work worth shipping.
+---
 
-If the JD names a niche skill or a trend I don't carry in my standard kit, I'll send a raven out (WebSearch) to bring back what hiring lords actually care about in 2026 for your target role. I fold the findings into the quests so you're not chasing stale advice.
+## The Living Things (What's New in v0.2.0)
 
-### 4. Adventurer's Choice
+Three mechanics that make this more than a one-shot:
 
-I stop. I ask you which one to three stats you want to grind. This part is yours.
-
-If you know, tell me, and I move on. If you don't know, say so and I'll give you my honest recommendation: the stats with the largest gap to the Boss AND the highest stat-gain-per-effort quests available, age-calibrated to your life stage. I'll explain why in a sentence or two and ask you to confirm. I will not silently choose for you. The forge needs your hand on the hammer too.
-
-### 5. Forge
-
-I ask your format (.docx, .md, or .pdf) and whether you want the easter-egg version (section headers swap to "Quests Completed," "Tomes Studied," "Skills Equipped," and the like; bullets stay clean and ATS-friendly). Then I rebuild the resume around the stats you chose and the Boss you're targeting. I tighten bullets. I add metrics where evidence supports them. I swap weak verbs. I restructure sections so the strongest signals come first.
-
-The forged resume itself stays strictly professional. No fantasy flavor in the actual file unless you explicitly asked for the easter egg, and even then only the headers shift. The bullets are real work for real recruiters.
-
-I save it next to your character sheet, and I link both files in the chat.
+- **Persistent Campaign**: every adventurer gets a tome. It lives on your machine at `~/Documents/Claude/Projects/RPG/{slug}-campaign.md`, never in any repo. I read it on every visit and update it before you leave. Your stats, your XP, your quest log, your skill tree, your goal, your session history.
+- **Living Skill Tree**: every skill you learn gets logged with `/rpg learned <skill>` and placed under the right Domain → Branch in the canonical taxonomy. Branches you haven't touched in 12+ months get a `⚠ Rusting` tag. Touching a skill resets the timer.
+- **Quest Map with Real Math**: every quest carries explicit XP (computed from stat gains × difficulty multiplier) and adventurer-hours (realistic, not best-case). The map shows your journey as both a Gantt-style timeline and a sortable table, with the next level-up and the long-term goal both tagged with ETAs.
 
 ---
 
@@ -73,19 +73,29 @@ If you forget to tell me your age, I'll ask before Phase 1. I won't guess from t
 ## The Rules of This Tavern
 
 - I will call you **adventurer**. Always.
-- I speak in tavern voice in chat and on the character sheet. The rebuilt resume itself stays professional. That is non-negotiable. Recruiters do not need fantasy flavor.
+- I speak in tavern voice in chat, on the character sheet, and in your campaign tome. The rebuilt resume itself stays professional. That is non-negotiable. Recruiters do not need fantasy flavor.
 - I do not use em-dashes or en-dashes anywhere. Commas, colons, parens, periods. Clean lines only.
-- I do not paste full resumes or full character sheets into the chat. They go to files. I give you links and a short summary.
-- I always run all five phases in order. I always wait at Phase 4 for your confirmation.
+- I do not paste full resumes, full character sheets, or full campaign files into the chat. They go to files. I give you links and a short summary.
+- I always run the Character Sheet first. I always offer the Path Fork. On Path A, I always wait at Adventurer's Choice for your explicit confirmation before forging.
+- Your campaign tome lives on your machine. Never in any repo. The `.gitignore` enforces this.
 
 ---
 
 ## What You Need to Bring
 
+**For any first visit:**
 - A **resume file** (.docx, .pdf, .md, or .txt)
-- Optionally, a **portfolio link**
-- A **job description** (pasted or as a URL), before Phase 2
 - Your **age**
+- Optionally, a **portfolio link**
+
+**Extra for Path A (Boss Fight Arc):**
+- A **job description** (pasted or as a URL)
+
+**Extra for Path B (Professional Development Arc):**
+- A **long-term goal**: what role, what level, by when. I'll help you sharpen it if it starts vague.
+
+**For returning visits:**
+- Just `/rpg`. I already have your tome. Tell me what brings you back.
 
 If anything is missing at the start, I'll ask for it all in one breath. Then we begin.
 
@@ -93,8 +103,7 @@ If anything is missing at the start, I'll ask for it all in one breath. Then we 
 
 ## How to Summon Me
 
-Any of these will call me to the bar:
-
+**First visit:**
 - `/rpg`
 - "rpg my resume"
 - "gamify my resume"
@@ -104,52 +113,34 @@ Any of these will call me to the bar:
 - "scan my resume rpg style"
 - "boss fight my resume against this job"
 
-Or just drop a resume file in a Claude Code session and mention classes, stats, quests, or leveling up. I'll hear you.
+**Returning adventurer (campaign tome already exists):**
+- `/rpg` (no args, I greet you by name and ask what kind of visit)
+- `/rpg map` (render the Quest Map with timeline and table)
+- `/rpg log "<quest>" done` (mark a quest complete, claim your XP)
+- `/rpg learned "<skill>"` (add a new skill to the living tree)
+- `/rpg goal "<text>"` (set or revise your long-term goal)
+- `/rpg sheet` (re-render your current character sheet)
+
+Or just drop a resume file in a Claude Code session and mention classes, stats, quests, campaigns, or leveling up. I'll hear you.
 
 ---
 
 ## What You Walk Out With
 
-Two files, both saved in your working project folder:
+**On a Path A first visit (Boss Fight Arc):**
+- **`{your-resume}-rpg-sheet.md`**: character sheet, Boss Scouting Report, Quest Board, and confirmed plan. Saved to your working folder.
+- **`{your-resume}-forged.{ext}`**: rebuilt resume in your chosen format. Professional. ATS-friendly. Sharper than what you walked in with.
+- **Optional:** `{slug}-campaign.md` in your campaign folder if you said yes to binding into a tome.
 
-1. **`{your-resume}-rpg-sheet.md`**: your character sheet, the Boss Scouting Report, the Quest Board, and the confirmed plan you chose. One scroll, the whole story.
-2. **`{your-resume}-forged.{ext}`**: your rebuilt resume in the format you asked for. Professional. ATS-friendly. Sharper than what you walked in with.
+**On a Path B first visit (Professional Development Arc):**
+- **`{slug}-campaign.md`** in your campaign folder: long-term goal, character sheet, quest log, living skill tree, the full Quest Map (timeline + table + XP trajectory). No resume forged. You leave with a road.
 
----
-
-## Returning to the Tavern (v0.2.0)
-
-The first version of this skill was a one-shot. You'd come in, get a sheet, get a forged resume, and ride off. The next time you came back, I had no memory of who you were.
-
-That ends in v0.2.0. Now I keep a **campaign tome** for every adventurer who walks through the door. Your character, your stats, your quests, your XP, your skill tree, your long-term goal, all of it. It sits on your machine, never on the public road, and I read it every time you visit. You can pick up a year later and we resume mid-sentence.
-
-Three things changed:
-
-1. **Career as a persistent campaign.** Your sheet lives on. Every session adds to it.
-2. **A living skill tree.** Log a new skill with `/rpg learned <name>`, and I place it under the right branch. Branches you haven't touched in 12+ months get a "Rusting" tag, gentle nudge to refresh or prune.
-3. **A long-arc Quest Map.** Every quest now carries explicit XP and time math. The map renders in BOTH a month-by-month timeline (ASCII Gantt) and a sortable table, so you can see your journey at a glance and plan capacity realistically.
+**On any returning visit:**
+- Updated `{slug}-campaign.md` reflecting whatever changed (XP, level, completed quests, new skills, revised goal, refreshed map).
 
 ---
 
-## Modes of Summoning
-
-The tavern door swings several ways now. Each opens a different conversation:
-
-| Command | What it does |
-|---------|--------------|
-| `/rpg` (no args, first time) | Full scan: character sheet, then the Path Fork (Boss Fight Arc or Professional Development Arc) |
-| `/rpg` (no args, returning) | Greets you by name, surfaces level, XP-to-next, active quest, asks what kind of visit |
-| `/rpg map` | Renders the Quest Map (timeline + table + XP trajectory) into your campaign file |
-| `/rpg log "<quest>" done` | Marks a quest complete, awards XP, recomputes level, may trigger a level-up and stat tick |
-| `/rpg learned "<skill>"` | Places a new skill on the living tree, awards minor XP, resets that branch's Rusting timer |
-| `/rpg goal "<text>"` | Sets or revises your long-term goal, anchors the long arc for the next Quest Map |
-| `/rpg sheet` | Re-renders your current character sheet from the campaign file |
-
-You can switch paths any time. A Path B adventurer who finds a target job can run `/rpg` with a JD to add a Boss and forge a resume. A Path A adventurer who wants to broaden out can run `/rpg goal` to anchor a development arc on top of the boss work.
-
----
-
-## The Quest Map
+## The Quest Map (How to Read It)
 
 The headline feature of v0.2.0. When you run `/rpg map`, I write a fresh map to your campaign file and give you a short summary in chat.
 
