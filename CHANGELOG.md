@@ -2,6 +2,11 @@
 
 All notable changes to the Reforged Professional Game (RPG) skill.
 
+## [0.2.1] 2026-05-27, "The Rename"
+
+### Changed
+- Renamed skill from "Resume Perfection Generator (RPG)" to "Reforged Professional Game (RPG)". Invocation command `/rpg` is unchanged. Trigger phrase "resume perfection generator" replaced with "reforged professional game".
+
 ## [0.2.0] 2026-05-24, "The Campaign Update"
 
 ### Added
